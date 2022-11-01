@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
 body {
-  min-height: 100vh;
   display: grid;
   max-width: 375px;
   font-family: "Plus Jakarta Sans", sans-serif;
+}
+@media screen and (width > 767px) {
+  body {
+    max-width: 768px;
+  }
 }
 
 .wrapper {
@@ -13,12 +17,18 @@ body {
   background: linear-gradient(#FFFFFF, #F0F1FF);
   padding: 1.5rem 1rem;
 }
+@media screen and (width > 767px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
 
 header,
 footer {
   display: flex;
   align-items: center;
   padding: 1rem;
+  z-index: 1;
 }
 
 footer {
@@ -31,9 +41,20 @@ footer {
   display: grid;
   gap: 1rem;
 }
+@media screen and (width > 767px) {
+  .top-section {
+    grid-template-columns: 1fr 1fr;
+    max-height: 500px;
+  }
+}
 .top-section h1 {
   font-weight: 800;
   font-size: 2.25rem;
+}
+@media screen and (width > 767px) {
+  .top-section h1 {
+    width: 16ch;
+  }
 }
 .top-section p {
   color: #83869A;
@@ -43,28 +64,69 @@ footer {
   max-width: 28ch;
   margin: 1.5rem 0;
 }
+@media screen and (width > 767px) {
+  .top-section p {
+    max-width: 34ch;
+  }
+}
 .top-section img {
   width: 327px;
+}
+@media screen and (width > 767px) {
+  .top-section img {
+    width: 640px;
+    position: relative;
+    top: -160px;
+  }
 }
 
 .bottom-section {
   display: grid;
   gap: 1rem;
 }
-.bottom-section h2 {
+@media screen and (width > 767px) {
+  .bottom-section {
+    max-width: 768px;
+  }
+}
+.bottom-section .intro-courses {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(#FF6F48, #F02AA6);
+  max-width: 45ch;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+@media screen and (width > 767px) {
+  .bottom-section .intro-courses {
+    display: grid;
+    place-content: center;
+    place-self: end;
+    height: 280px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.bottom-section .intro-courses h2 {
   color: white;
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 2rem;
-  background: linear-gradient(#FF6F48, #F02AA6);
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 0;
+}
+@media screen and (width > 767px) {
+  .bottom-section .intro-courses h2 {
+    max-width: 18ch;
+    margin: 0;
+  }
 }
 .bottom-section .courses-list {
   display: grid;
   gap: 1rem;
   margin-bottom: 5rem;
+}
+@media screen and (width > 767px) {
+  .bottom-section .courses-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .bottom-section img {
   width: 56px;
@@ -90,6 +152,11 @@ footer {
   font-weight: 400;
   display: block;
   margin-bottom: 1.5rem;
+}
+@media screen and (width > 767px) {
+  .bottom-section .course-description {
+    max-width: 24ch;
+  }
 }
 .bottom-section a {
   font-size: 1.125rem;
@@ -129,7 +196,7 @@ footer {
 }
 
 .footer-btn {
-  background: linear-gradient(#FF6F48, #F02AA6);
+  background: linear-gradient(#4851FF, #F02AA6);
 }
 
 /*# sourceMappingURL=styles.css.map */
