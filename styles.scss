@@ -10,12 +10,21 @@ $font-weight-500 : 500;
 $font-weight-700 : 700;
 $font-weight-800 : 800;
 
-$background-color : linear-gradient(#FFFFFF, #F0F1FF);
-$title-color : #13183F;
-$text-color : #83869A;
-$accent-color : #F74780;
-$gradient-1 : linear-gradient(#FF6F48, #F02AA6);
-$gradient-2 : linear-gradient(#4851FF, #F02AA6);
+$background-color : linear-gradient(hsl(0, 0%, 100%), hsl(236, 100%, 97%));
+$title-color : hsl(233, 54%, 16%);
+$text-color : hsl(232, 10%, 56%);
+$accent-color : hsl(341, 92%, 62%);
+$accent-color-hover : hsl(341, 100%, 83%);
+$gradient-1 : linear-gradient(hsl(13, 100%, 64%), hsl(322, 87%, 55%));
+$gradient-2 : linear-gradient(hsl(237, 100%, 64%), hsl(322, 87%, 55%));
+
+$button-1-idle : #13183F;
+$button-1-hover : #666CA3; 
+$button-2-idle : linear-gradient(hsl(13, 100%, 64%), hsl(322, 87%, 55%));
+$button-2-hover :linear-gradient(hsl(13, 100%, 84%), hsl(322, 87%, 75%));
+$button-3-idle : linear-gradient(hsl(237, 100%, 64%), hsl(322, 87%, 55%));
+$button-3-hover : linear-gradient(hsl(237, 100%, 84%), hsl(322, 87%, 75%)); 
+ 
 
 
 body {
@@ -257,6 +266,10 @@ footer {
         font-weight: $font-weight-700;
         text-decoration: none;
         color: $accent-color;
+
+    &:hover{
+        color: $accent-color-hover; 
+    }
     }
 }
 
@@ -275,7 +288,11 @@ footer {
     height: 56px;
     border-radius: 31.5px;
     border: none;
-    background: $gradient-1;
+    background: $button-2-idle;
+
+    &:hover{
+        background: $button-2-hover;
+    }
 }
 
 .outer-btn {
@@ -289,10 +306,19 @@ footer {
     margin-left: auto;
 }
 
+
+
 .header-btn {
-    background: $title-color;
-}
+    background: $button-1-idle;
+
+    &:hover{ 
+        background: $button-1-hover;
+    } 
+} 
 
 .footer-btn {
-    background: $gradient-2;
-}
+    background: $button-3-idle; 
+    &:hover{
+        background: $button-3-hover;
+}   
+}   

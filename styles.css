@@ -20,7 +20,7 @@ body {
 .wrapper {
   display: grid;
   gap: 2rem;
-  background: linear-gradient(#FFFFFF, #F0F1FF);
+  background: linear-gradient(hsl(0deg, 0%, 100%), hsl(236deg, 100%, 97%));
   padding: 1.5rem 1rem;
 }
 @media screen and (width > 767px) {
@@ -57,7 +57,7 @@ footer {
 }
 
 footer {
-  background-color: #13183F;
+  background-color: hsl(233deg, 54%, 16%);
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -96,7 +96,7 @@ footer {
   }
 }
 .top-section p {
-  color: #83869A;
+  color: hsl(232deg, 10%, 56%);
   font-weight: 400;
   font-size: 1rem;
   line-height: 26px;
@@ -165,7 +165,7 @@ footer {
 }
 .bottom-section .intro-courses {
   padding: 1rem 1.5rem;
-  background: linear-gradient(#FF6F48, #F02AA6);
+  background: linear-gradient(hsl(13deg, 100%, 64%), hsl(322deg, 87%, 55%));
   max-width: 45ch;
   border-radius: 10px;
   margin-bottom: 0;
@@ -212,7 +212,7 @@ footer {
 }
 .bottom-section .course-description {
   font-size: 1rem;
-  color: #83869A;
+  color: hsl(232deg, 10%, 56%);
   font-weight: 400;
   display: block;
   margin-bottom: 1.5rem;
@@ -226,7 +226,10 @@ footer {
   font-size: 1.125rem;
   font-weight: 700;
   text-decoration: none;
-  color: #F74780;
+  color: hsl(341deg, 92%, 62%);
+}
+.bottom-section a:hover {
+  color: hsl(341deg, 100%, 83%);
 }
 
 .logo {
@@ -241,7 +244,10 @@ footer {
   height: 56px;
   border-radius: 31.5px;
   border: none;
-  background: linear-gradient(#FF6F48, #F02AA6);
+  background: linear-gradient(hsl(13deg, 100%, 64%), hsl(322deg, 87%, 55%));
+}
+.page-btn:hover {
+  background: linear-gradient(hsl(13deg, 100%, 84%), hsl(322deg, 87%, 75%));
 }
 
 .outer-btn {
@@ -258,9 +264,15 @@ footer {
 .header-btn {
   background: #13183F;
 }
+.header-btn:hover {
+  background: #666CA3;
+}
 
 .footer-btn {
-  background: linear-gradient(#4851FF, #F02AA6);
+  background: linear-gradient(hsl(237deg, 100%, 64%), hsl(322deg, 87%, 55%));
+}
+.footer-btn:hover {
+  background: linear-gradient(hsl(237deg, 100%, 84%), hsl(322deg, 87%, 75%));
 }
 
 /*# sourceMappingURL=styles.css.map */
