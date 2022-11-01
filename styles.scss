@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
 
-$font-family : 'Plus Jakarta Sans', sans-serif;
+$font-family : 'Plus Jakarta Sans',
+sans-serif;
 
 
 $font-weight-400 : 400;
@@ -10,208 +11,263 @@ $font-weight-700 : 700;
 $font-weight-800 : 800;
 
 $background-color : linear-gradient(#FFFFFF, #F0F1FF);
-$title-color : #13183F;  
+$title-color : #13183F;
 $text-color : #83869A;
 $accent-color : #F74780;
 $gradient-1 : linear-gradient(#FF6F48, #F02AA6);
-$gradient-2 : linear-gradient(#4851FF , #F02AA6); 
+$gradient-2 : linear-gradient(#4851FF, #F02AA6);
 
- 
-body{
-    display: grid; 
-    max-width: 375px; 
-    font-family: $font-family;   
 
-    @media screen and (width>767px) {
-        max-width: 768px;
-    }
-}
-
-.wrapper{
-    display: grid; 
-    gap: 2rem;
-    background: $background-color;  
-    padding: 1.5rem 1rem; 
+body {
+    display: grid;
+    max-width: 375px;
+    font-family: $font-family;
+    justify-content: center; 
   
     @media screen and (width>767px) {
         max-width: 768px;
     } 
 
-}     
- 
-header,
-footer{
-    display: flex; 
-    align-items: center; 
-    padding: 1rem; 
-    z-index: 1;  
-}  
+    @media screen and (width>1439px) {
+        max-width: 1440px; 
+    }
+}
 
-footer{
-    background-color: $title-color; 
-    padding-top: 2rem; 
-    padding-bottom: 2rem; 
- 
+.wrapper {
+    display: grid;
+    gap: 2rem;
+    background: $background-color;
+    padding: 1.5rem 1rem;
+
+    @media screen and (width>767px) {
+        max-width: 768px;
+    }
+
+    @media screen and (width>1439px) {
+        max-width: 1440px;
+    }
+
+
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1;
+
+
+    @media screen and (width>767px){
+        padding-left: 2rem;
+        padding-right: 2rem; 
+    } 
+
+    @media screen and (width>1439px) {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
+footer {
+    background-color: $title-color;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
 }
 
 //formating the top half section of the page
 
-.top-section{
+.top-section {
     display: grid;
-    gap: 1rem; 
+    gap: 1rem;   
+    
 
-    @media screen and (width>767px){
+    @media screen and (width>767px) {
         grid-template-columns: 1fr 1fr;
+        padding-left: 2rem;
+        padding-right: 2rem;  
+//forcing height
+        max-height: 450px; 
+//forcing heigt    
+    } 
 
-        //forcing the height
-       max-height: 500px;      
-       //forcing the height
-    }  
+    @media screen and (width>1439px) {  
+        padding-left: 10rem;
+        padding-right: 10rem;
+    //forcing height
+    max-height: 550px; 
+    //forcing heigt   
+    }   
+ 
+    h1 {
+        font-weight: $font-weight-800;
+        font-size: 2.25rem;
 
-
-    h1{
-        font-weight: $font-weight-800; 
-        font-size: 2.25rem;  
-
-        @media screen and (width>767px){
+        @media screen and (width>767px) {
             width: 16ch;
         }
-    } 
-    
-    p{
+        @media screen and (width>1439px){
+            font-size: 3.5rem; 
+        }
+    }
+
+    p {
         color: $text-color;
-        font-weight: $font-weight-400;   
-        font-size: 1rem; 
-        line-height: 26px; 
-        max-width: 28ch;       
-        margin: 1.5rem 0; 
+        font-weight: $font-weight-400;
+        font-size: 1rem;
+        line-height: 26px;
+        max-width: 28ch;
+        margin: 1.5rem 0;
 
-        @media screen and (width>767px){
-            max-width: 34ch;  
-        }  
-    } 
-
-    img{
-        width: 327px; 
-
-        @media screen and (width>767px){
-            width: 640px;
+        @media screen and (width>767px) {
+            max-width: 34ch;
+        }
+        @media screen and (width>1439px){
+            margin-bottom: 3rem; 
+        }
+    }
+ 
+    .hero-image {
+        
+        max-width: 327px;
+   
+        @media screen and (width>767px) {
+            max-width: 640px;
             position: relative;
-            top: -160px;  
-        } 
+            top: -160px;
+            right: 20px; 
+        }
+
+        @media screen and (width>1439px){
+            max-width: 850px;  
+            position: relative; 
+            top: -190px; 
+            right: -10px; 
+
+
          
-    }     
+        }     
+    }
+
 }
 
 //formating the bottom half section
 
-.bottom-section{
+.bottom-section {
     display: grid;
     gap: 1rem; 
+    place-content: center; 
 
     @media screen and (width>767px) {
         max-width: 768px;
-    } 
-  
-
-    .intro-courses{
-        
-        
-        padding: 1rem 1.5rem;  
-        background: $gradient-1; 
-        max-width: 45ch;    
-        border-radius: 10px;  
-        margin-bottom: 0; 
-
-        @media screen and (width>767px){
-            display: grid; 
-            
-            //forcing the height
-            place-content: center;
-            place-self: end; 
-            height: 280px; 
-            padding-top: 0; 
-            padding-bottom: 0; 
-             //forcing the height
-        
-        }
-
-        h2{
-        color: white;
-        font-size: 1.5rem;   
-        font-weight: $font-weight-800;
-        line-height: 2rem;   
-        
-        @media screen and (width>767px){
-            max-width: 18ch;  
-            margin: 0; 
-            
-        } 
-        } 
-    }  
-
-    .courses-list{
-        display: grid;
-        gap: 1rem; 
-        margin-bottom: 5rem; 
-
-        @media screen and (width>767px){
-            grid-template-columns: 1fr 1fr;
-  
-        }  
-        
-    }
-
-    img{
-        width: 56px;
-        height: 56px; 
-        position: relative; 
-        left: 1.75rem;
-        top: 1.75rem; 
-    }
-
-    .course-item{ 
-        background: white;
-         padding: 3rem 1.75rem 2rem;   
-        border-radius: 10px;     
     }   
-    
-    
-    .course-title{
-        font-size: 1.25rem;
-        font-weight: $font-weight-800;
-        display: block; 
-        margin-bottom: 2rem; 
+
+    @media screen and (width>1439px) {
+        max-width: 1440px; 
     }
 
-    .course-description{
-        font-size: 1rem;
-        color: $text-color;
-        font-weight: $font-weight-400;  
-        display: block;
-        margin-bottom: 1.5rem; 
+    .courses-list {
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 5rem;
 
         @media screen and (width>767px) {
-            max-width :24ch;   
+            grid-template-columns: 1fr 1fr;
         }
-    } 
 
-    a{
-        font-size: 1.125rem; 
-        font-weight: $font-weight-700; 
-        text-decoration: none; 
-        color: $accent-color;   
+        @media screen and (width>1439px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
-} 
+
+    .intro-courses {
 
 
-.logo{
-    width: 89px;  
-} 
+        padding: 1rem 1.5rem;
+        background: $gradient-1;
+        max-width: 45ch;
+        border-radius: 10px;
+        margin-bottom: 0;
+
+        @media screen and (width>767px) {
+            display: grid;
+
+            //forcing the height
+            place-content: center;
+            place-self: end;
+            height: 280px;
+            padding-top: 0;
+            padding-bottom: 0;
+            //forcing the height
+
+        }
+
+        h2 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: $font-weight-800;
+            line-height: 2rem;
+
+            @media screen and (width>767px) {
+                max-width: 18ch;
+                margin: 0;
+
+            }
+        }
+    }
+
+
+    img {
+        width: 56px;
+        height: 56px;
+        position: relative;
+        left: 1.75rem;
+        top: 1.75rem;
+    }
+
+    .course-item {
+        background: white;
+        padding: 3rem 1.75rem 2rem;
+        border-radius: 10px;
+    }
+
+
+    .course-title {
+        font-size: 1.25rem;
+        font-weight: $font-weight-800;
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    .course-description {
+        font-size: 1rem;
+        color: $text-color;
+        font-weight: $font-weight-400;
+        display: block;
+        margin-bottom: 1.5rem;
+
+        @media screen and (width>767px) {
+            max-width: 24ch;
+        }
+    }
+
+    a {
+        font-size: 1.125rem;
+        font-weight: $font-weight-700;
+        text-decoration: none;
+        color: $accent-color;
+    }
+}
+
+
+.logo {
+    width: 89px;
+}
 
 //Styling the buttons
 
-.page-btn{
+.page-btn {
     font-weight: $font-weight-500;
     font-size: 1rem;
     color: white;
@@ -219,24 +275,24 @@ footer{
     height: 56px;
     border-radius: 31.5px;
     border: none;
-    background: $gradient-1;  
+    background: $gradient-1;
 }
 
-.outer-btn{
+.outer-btn {
     width: 140px;
-    height : 48px;
-    border-radius: 28px; 
+    height: 48px;
+    border-radius: 28px;
     border: none;
     color: white;
     font-weight: $font-weight-700;
-    font-size: 1rem; 
-    margin-left: auto; 
-} 
-
-.header-btn{
-    background: $title-color; 
+    font-size: 1rem;
+    margin-left: auto;
 }
 
-.footer-btn{
-    background: $gradient-2;  
+.header-btn {
+    background: $title-color;
+}
+
+.footer-btn {
+    background: $gradient-2;
 }

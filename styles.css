@@ -4,10 +4,16 @@ body {
   display: grid;
   max-width: 375px;
   font-family: "Plus Jakarta Sans", sans-serif;
+  justify-content: center;
 }
 @media screen and (width > 767px) {
   body {
     max-width: 768px;
+  }
+}
+@media screen and (width > 1439px) {
+  body {
+    max-width: 1440px;
   }
 }
 
@@ -22,6 +28,11 @@ body {
     max-width: 768px;
   }
 }
+@media screen and (width > 1439px) {
+  .wrapper {
+    max-width: 1440px;
+  }
+}
 
 header,
 footer {
@@ -29,6 +40,20 @@ footer {
   align-items: center;
   padding: 1rem;
   z-index: 1;
+}
+@media screen and (width > 767px) {
+  header,
+footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (width > 1439px) {
+  header,
+footer {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
 }
 
 footer {
@@ -44,7 +69,16 @@ footer {
 @media screen and (width > 767px) {
   .top-section {
     grid-template-columns: 1fr 1fr;
-    max-height: 500px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-height: 450px;
+  }
+}
+@media screen and (width > 1439px) {
+  .top-section {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    max-height: 550px;
   }
 }
 .top-section h1 {
@@ -54,6 +88,11 @@ footer {
 @media screen and (width > 767px) {
   .top-section h1 {
     width: 16ch;
+  }
+}
+@media screen and (width > 1439px) {
+  .top-section h1 {
+    font-size: 3.5rem;
   }
 }
 .top-section p {
@@ -69,24 +108,59 @@ footer {
     max-width: 34ch;
   }
 }
-.top-section img {
-  width: 327px;
+@media screen and (width > 1439px) {
+  .top-section p {
+    margin-bottom: 3rem;
+  }
+}
+.top-section .hero-image {
+  max-width: 327px;
 }
 @media screen and (width > 767px) {
-  .top-section img {
-    width: 640px;
+  .top-section .hero-image {
+    max-width: 640px;
     position: relative;
     top: -160px;
+    right: 20px;
+  }
+}
+@media screen and (width > 1439px) {
+  .top-section .hero-image {
+    max-width: 850px;
+    position: relative;
+    top: -190px;
+    right: -10px;
   }
 }
 
 .bottom-section {
   display: grid;
   gap: 1rem;
+  place-content: center;
 }
 @media screen and (width > 767px) {
   .bottom-section {
     max-width: 768px;
+  }
+}
+@media screen and (width > 1439px) {
+  .bottom-section {
+    max-width: 1440px;
+  }
+}
+.bottom-section .courses-list {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+@media screen and (width > 767px) {
+  .bottom-section .courses-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (width > 1439px) {
+  .bottom-section .courses-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .bottom-section .intro-courses {
@@ -116,16 +190,6 @@ footer {
   .bottom-section .intro-courses h2 {
     max-width: 18ch;
     margin: 0;
-  }
-}
-.bottom-section .courses-list {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 5rem;
-}
-@media screen and (width > 767px) {
-  .bottom-section .courses-list {
-    grid-template-columns: 1fr 1fr;
   }
 }
 .bottom-section img {
