@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+$font-family : 'Plus Jakarta Sans', sans-serif;
+
+
+$font-weight-400 : 400;
+$font-weight-500 : 500;
+$font-weight-700 : 700;
+$font-weight-800 : 800;
+
+$background-color : linear-gradient(#FFFFFF, #F0F1FF);
+$title-color : #13183F;  
+$text-color : #83869A;
+$accent-color : #F74780;
+$gradient-1 : linear-gradient(#FF6F48, #F02AA6);
+$gradient-2 : linear-gradient(#4851FF , #F02AA6); 
+
+
+
+body{
+    min-height: 100vh;
+    display: grid; 
+    max-width: 375px; 
+    
+    font-family: $font-family;   
+} 
+.wrapper{
+    display: grid; 
+    gap: 2rem;
+    background: $background-color;  
+    padding: 1.5rem 1rem; 
+}    
+ 
+header,
+footer{
+    display: flex; 
+    align-items: center; 
+    padding: 1rem; 
+}  
+
+footer{
+    background-color: $title-color; 
+    padding-top: 2rem; 
+    padding-bottom: 2rem; 
+}
+
+
+.top-section{
+    display: grid;
+    gap: 1rem; 
+
+    h1{
+        font-weight: $font-weight-800; 
+        font-size: 2.25rem;  
+    } 
+    
+    p{
+        color: $text-color;
+        font-weight: $font-weight-400;   
+        font-size: 1rem; 
+        line-height: 26px; 
+        max-width: 28ch;       
+        margin: 1.5rem 0; 
+    } 
+
+    img{
+        width: 327px; 
+         
+    }     
+}
+
+
+.bottom-section{
+    display: grid;
+    gap: 1rem; 
+
+    h2{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: $font-weight-800;
+        line-height: 2rem; 
+        background: $gradient-1; 
+        padding : 1.5rem;
+        border-radius: 10px;  
+        margin-bottom: 0; 
+    }  
+
+    .courses-list{
+        display: grid;
+        gap: 1rem; 
+        margin-bottom: 5rem; 
+        
+    }
+
+    img{
+        width: 56px;
+        height: 56px; 
+        position: relative; 
+        left: 1.75rem;
+        top: 1.75rem; 
+    }
+
+    .course-item{ 
+        background: white;
+         padding: 3rem 1.75rem 2rem;   
+        border-radius: 10px;     
+    }   
+    
+    
+    .course-title{
+        font-size: 1.25rem;
+        font-weight: $font-weight-800;
+        display: block; 
+        margin-bottom: 2rem; 
+    }
+
+    .course-description{
+        font-size: 1rem;
+        color: $text-color;
+        font-weight: $font-weight-400;  
+        display: block;
+        margin-bottom: 1.5rem; 
+    } 
+
+    a{
+        font-size: 1.125rem; 
+        font-weight: $font-weight-700; 
+        text-decoration: none; 
+        color: $accent-color;   
+    }
+} 
+
+
+.logo{
+    width: 89px;  
+} 
+
+//Styling the buttons
+
+.page-btn{
+    font-weight: $font-weight-500;
+    font-size: 1rem;
+    color: white;
+    width: 167px;
+    height: 56px;
+    border-radius: 31.5px;
+    border: none;
+    background: $gradient-1;  
+}
+
+.outer-btn{
+    width: 140px;
+    height : 48px;
+    border-radius: 28px; 
+    border: none;
+    color: white;
+    font-weight: $font-weight-700;
+    font-size: 1rem; 
+    margin-left: auto; 
+} 
+
+.header-btn{
+    background: $title-color;
+}
+
+.footer-btn{
+    background: $gradient-1;  
+}

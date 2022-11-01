@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+body {
+  min-height: 100vh;
+  display: grid;
+  max-width: 375px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  gap: 2rem;
+  background: linear-gradient(#FFFFFF, #F0F1FF);
+  padding: 1.5rem 1rem;
+}
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #13183F;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.top-section {
+  display: grid;
+  gap: 1rem;
+}
+.top-section h1 {
+  font-weight: 800;
+  font-size: 2.25rem;
+}
+.top-section p {
+  color: #83869A;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 26px;
+  max-width: 28ch;
+  margin: 1.5rem 0;
+}
+.top-section img {
+  width: 327px;
+}
+
+.bottom-section {
+  display: grid;
+  gap: 1rem;
+}
+.bottom-section h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 2rem;
+  background: linear-gradient(#FF6F48, #F02AA6);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+.bottom-section .courses-list {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+.bottom-section img {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  left: 1.75rem;
+  top: 1.75rem;
+}
+.bottom-section .course-item {
+  background: white;
+  padding: 3rem 1.75rem 2rem;
+  border-radius: 10px;
+}
+.bottom-section .course-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 2rem;
+}
+.bottom-section .course-description {
+  font-size: 1rem;
+  color: #83869A;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.bottom-section a {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #F74780;
+}
+
+.logo {
+  width: 89px;
+}
+
+.page-btn {
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  width: 167px;
+  height: 56px;
+  border-radius: 31.5px;
+  border: none;
+  background: linear-gradient(#FF6F48, #F02AA6);
+}
+
+.outer-btn {
+  width: 140px;
+  height: 48px;
+  border-radius: 28px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+.header-btn {
+  background: #13183F;
+}
+
+.footer-btn {
+  background: linear-gradient(#FF6F48, #F02AA6);
+}
+
+/*# sourceMappingURL=styles.css.map */
